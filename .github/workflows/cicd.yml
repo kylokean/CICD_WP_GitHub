@@ -12,17 +12,17 @@ jobs:
       - name: Git clone repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: 12
-          cache: 'npm'
+      # - name: Setup Node.js environment
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 12
+      #     cache: 'npm'
 
-      - name: Install Node Modules
-        run: npm i
+      # - name: Install Node Modules
+      #   run: npm i
 
-      - name: Build App
-        run: npm run prod
+      # - name: Build App
+      #   run: npm run prod
 
       - name: Install lftp
         run: sudo apt-get install lftp
