@@ -29,8 +29,8 @@ jobs:
 
       - name: Copy Theme files to server
         run: |
-            lftp -e "set ftp:ssl-allow no; set ftp:use-feat false; set ssl:verify-certificate no; mirror --delete -R -P 20 ./dist/theme /kylokean.com/test/wp-content/themes; bye" -u ${{ secrets.MYHOSTING_USERNAME }},${{ secrets.MYHOSTING_PASS }} ${{ secrets.MYHOSTING_HOST }}
+            lftp -e "set ftp:ssl-allow no; set ftp:use-feat false; set ssl:verify-certificate no; mirror --delete -R -P 20 ./src/theme /kylokean.com/test/wp-content/themes; bye" -u ${{ secrets.MYHOSTING_USERNAME }},${{ secrets.MYHOSTING_PASS }} ${{ secrets.MYHOSTING_HOST }}
 
       - name: Copy Plugins files to server 
         run: |
-            lftp -e "set ftp:ssl-allow no; set ftp:use-feat false; set ssl:verify-certificate no; mirror --delete -R -P 20 ./dist/plugin /kylokean.com/test/wp-content/plugins; bye" -u ${{ secrets.MYHOSTING_USERNAME }},${{ secrets.MYHOSTING_PASS }} ${{ secrets.MYHOSTING_HOST }}
+            lftp -e "set ftp:ssl-allow no; set ftp:use-feat false; set ssl:verify-certificate no; mirror --delete -R -P 20 ./src/plugin /kylokean.com/test/wp-content/plugins; bye" -u ${{ secrets.MYHOSTING_USERNAME }},${{ secrets.MYHOSTING_PASS }} ${{ secrets.MYHOSTING_HOST }}
